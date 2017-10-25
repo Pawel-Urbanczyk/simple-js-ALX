@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML>
+<HMTL>
+<head>
+	<title>JAVA SCRIPT</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+
+
+	<script type="text/javascript">
+
+	function ptak(txt){
+	document.getElementById('ramka').innerHTML+=' '+txt;
+	}
+	
+	function clear(){
+	document.getElementById('ramka').innerHTML=' ';
+	}
+
+	function kolor(rgb){
+	document.getElementById('napis').style.color = rgb;
+	}
+	
+	
+	var szerokosc = 100;
+	function szer(){
+	  szerokosc += 10;
+		document.getElementById('prostokat').style.width = szerokosc + 'px';
+	}
+
+	</script>
+
+</head>
+
+<body>
+
+	<script type="text/javascript">
+
+	</script>
+
+<input type="button" value="kura"  onclick="ptak('kura')"    onmouseover="clear()" id="kura"/>
+
+<input type="button" value="kogut" onclick="ptak('kogut')" onmouseover="clear()" id="przycisk"/>
+
+<div id="ramka" style="height:100px; width: 200px; border: 1px solid green;"></div>
+
+
+<div id="napis">
+	<b>Stół z powyłamywanymi nogami.</b>
+
+	<input type="button" value="green"  onclick="kolor('green')" id="green"/>
+
+	<input type="button" value="red"  onclick="kolor('red')" id="red"/>
+
+
+	<input type="button" value="blue"  onclick="kolor('blue')" id="blue"/>
+
+
+</div>
+
+
+
+<div id="prostokat" style="height:100px; width: 100px; background-color: black;" onclick="szer()"></div>
+
+</body>
+</HMTL>
